@@ -1,0 +1,103 @@
+body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* Full-width input fields */
+input[type=text],input[type="date"],textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  
+}
+
+.radio
+{
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+h3
+{
+  text-align: center;
+}
+
+/* Set a style for all buttons */
+.button {
+  background-color: #497FAF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  width: 40%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+input:hover,.radio:hover
+{
+  border: 1px solid black;
+}
+p{
+  text-align: center;
+  font-size: 15px;
+  color: red;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+/* The Modal (background) */
+.modal
+{
+  position: fixed; /* Stay in place */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color:gray; /* Fallback color */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  width: 75%;
+  max-width: 350px;
+  margin: auto;
+  position: absolute;
+  top: 2%;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border: 1px solid #888;
+  background-color: #fefefe;
+}
+
+.hyperlink #link
+{
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  border: none;
+  text-decoration: none;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.hyperlink #link:hover
+{
+  border: 1px solid black;
+}

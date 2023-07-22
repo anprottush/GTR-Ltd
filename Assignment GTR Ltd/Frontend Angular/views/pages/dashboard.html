@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../style/dashboard.css">
+  <link href="/views/style/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app="my-app" >
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+  <aside>
+    <!-- Sidebar Navigation -->
+    <nav>
+      <ul>
+         
+        <li><a id="list1" href="productList.html" class="btn btn-success">Product List</a></li>
+       
+        <li><a id="list2" href="productmaster.html" class="btn btn-success">Product Master</a></li>
+        <li><a id="list3" href="productdetail.html" class="btn btn-success">Product Detail</a></li>
+        <li ng-controller="logoutCtrl"><button class="btn btn-danger" ng-click="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <!-- Main Content -->
+    <section class="widget">
+      <!-- <h2>Widget 1</h2> -->
+      <!-- Widget Content Here -->
+    </section>
+    <section class="widget">
+      <!-- <h2>Widget 2</h2> -->
+      <!-- Widget Content Here -->
+    </section>
+    <!-- Add more widgets as needed -->
+  </main>
+<script src="/app/libs/angular-1.8.2/angular.min.js"></script>
+<script src="/views/style/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="/app/controllers/logout.js" type="text/javascript"></script>
+</body>
+</html>

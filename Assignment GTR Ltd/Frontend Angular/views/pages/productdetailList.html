@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/views/style/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Product Detail List</title>
+</head>
+<body ng-app="my-app">
+    <div ng-controller="productdetaillistCtrl" class="container mt-3">
+        <h3>Product Detail List</h3>
+        <table class="table table-bordered" >
+            <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Product Purchase Customer</th>
+                  <th>Product Purchase Date</th>
+                  <th>Product Sales Employee Name</th>
+                  <th>Product Description</th>
+                  <th>Product Stock</th>
+                  <th>Product Status</th>
+                  <th>Product ProductMaster Id</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr ng-repeat="p in productdetails" >
+                    <td>{{p.Id}}</td>
+                    <td>{{p.PurchaseCustomer}}</td>
+                    <td>{{p.PurchaseDate}}</td>
+                    <td>{{p.SalesEmployee}}</td>
+                    <td>{{p.Description}}</td>
+                    <td>{{p.Stock}}</td>
+                    <td>{{p.Status}}</td>
+                    <td>{{p.ProductMasterId}}</td>
+                    <td>
+                         <!--<a href="productmasterEdit.html/{{p.Id}}" class="btn btn-success" >Edit</a> 
+                         <button ng-controller="" class="btn btn-success" ng-click="">Edit</button>-->
+                        <button ng-controller="productdetailDeleteCtrl" class="btn btn-danger" ng-click="deleteproductdetail(p.Id)">Delete</button> 
+                    </td>
+                </tr>  
+              </tbody>
+        </table>
+    </div>
+    <script src="/app/libs/angular-1.8.2/angular.min.js"></script>
+    <script src="/views/style/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/app/controllers/productdetailList.js" type="text/javascript"></script>
+    
+</body>
+</html>

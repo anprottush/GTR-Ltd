@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/views/style/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Product List</title>
+</head>
+<body ng-app="my-app">
+    <div ng-controller="productlistCtrl" class="container mt-3" >
+        <h3>Product List</h3>
+        <p ng-if="!isAuthorized">You are not authorized to view the product list.</p>
+        <table class="table table-bordered">
+            
+            <thead ng-if="isAuthorized">
+                
+                <tr >
+                  <th>Id</th>
+                  <th>Category Id</th>
+                  <th>Category Name</th>
+                  <th>Unit Name</th>
+                  <th>Name</th>
+                  <th>Code</th>
+                  <th>Parent Code</th>
+                  <th>Product Barcode</th>
+                  <th>Description</th>
+                  <th>Brand Name</th>
+                  <th>Size Name</th>
+                  <th>Color Name</th>
+                  <th>Model Name</th>
+                  <th>Variant Name</th>
+                  <th>Old Price</th>
+                  <th>Price</th>
+                  <th>Cost Price</th>
+                  <th>Warehouse List</th>
+                  <th>stock</th>
+                  <th>Total Purchase</th>,
+                  <th>Last Purchase Date</th>
+                  <th>Last Purchase Supplier</th>
+                  <th>Total Sales</th>
+                  <th>Last Sales Date</th>
+                  <th>Last Sales Customer</th>
+                  <th>Image Path</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr ng-repeat="p in products" >
+                    <td>{{p.Id}}</td>
+                    <td>{{p.CategoryId}}</td>
+                    <td>{{p.CategoryName}}</td>
+                    <td>{{p.UnitName}}</td>
+                    <td>{{p.Name}}</td>
+                    <td>{{p.Code}}</td>
+                    <td>{{p.ParentCode}}</td>
+                    <td>{{p.ProductBarcode}}</td>
+                    <td>{{p.Description}}</td>
+                    <td>{{p.BrandName}}</td>
+                    <td>{{p.SizeName}}</td>
+                    <td>{{p.ColorName}}</td>
+                    <td>{{p.ModelName}}</td>
+                    <td>{{p.VariantName}}</td>
+                    <td>{{p.OldPrice}}</td>
+                    <td>{{p.Price}}</td>
+                    <td>{{p.CostPrice}}</td>
+                    <td>{{p.WarehouseList}}</td>
+                    <td>{{p.stock}}</td>
+                    <td>{{p.TotalPurchase}}</td>
+                    <td>{{p.LastPurchaseDate}}</td>
+                    <td>{{p.LastPurchaseSupplier}}</td>
+                    <td>{{p.TotalSales}}</td>
+                    <td>{{p.LastSalesDate}}</td>
+                    <td>{{p.LastSalesCustomer}}</td>
+                    <td>{{p.ImagePath}}</td>
+                    <td>{{p.Type}}</td>
+                    <td>{{p.Status}}</td>
+                    <td>
+                        <!-- <a href="agencyEdit.html/{{a.Id}}" class="btn btn-success" >Edit</a> 
+                        <button ng-controller="agencyEditCtrl" class="btn btn-success" ng-click="editAgency(a.Id)">Edit</button>
+                        <button ng-controller="agencyDeleteCtrl" class="btn btn-danger" ng-click="deleteAgency(a.Id)">Delete</button>-->
+                    </td>
+                </tr>  
+              </tbody>
+        </table>
+    </div>
+    <script src="/app/libs/angular-1.8.2/angular.min.js"></script>
+    <script src="/views/style/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/app/controllers/productList.js" type="text/javascript"></script>
+    
+</body>
+</html>

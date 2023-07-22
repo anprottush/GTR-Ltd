@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/productdetail.css" type="text/css">
+  <title>Product Detail</title>
+</head>
+<body ng-app="my-app">
+
+  <div class="modal" ng-controller="detailCtrl">
+     <form class="modal-content" ng-submit="productdetail()" name="productdetailForm"  novalidate>
+      <h3>Product Detail Data</h3>
+      <div class="container">
+        <input type="text" placeholder="Enter Product Purchase Customer" ng-model="PurchaseCustomer" id="purchasecustomer" required>
+        <input type="date" placeholder="" ng-model="PurchaseDate" id="purchasedate">
+        <input type="text" placeholder="Enter Product Sales Employee Name" ng-model="SalesEmployee" id="salesemployee" required>
+        <textarea placeholder="Enter Product Description" ng-model="Description" id="description" required></textarea>
+        <input type="text" placeholder="Enter Product Stock" ng-model="Stock" id="stock" required>
+        <input type="text" placeholder="Enter Product Status" ng-model="Status" id="status" required>
+        <input type="text" placeholder="Enter Product ProductMaster Id" ng-model="ProductMasterId" id="productmasterid" required>
+        <button type="submit" class="button" name="create">Create</button>  
+        <a href="dashboard.html" class="button">Back</a>
+
+        <p id="msg" ></p>
+    </div>
+  </form>
+</div>
+<script src="/app/libs/angular-1.8.2/angular.min.js"></script>
+<script src="/app/controllers/productdetail.js" type="text/javascript"></script>
+</body>
+</html>
